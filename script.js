@@ -40,3 +40,14 @@ function reset() {
   updateDisplay(0);
   timeNow = 0;
 }
+
+const timeButtons = document.querySelectorAll('input[type="radio"]')
+
+timeButtons.forEach(button =>{
+  button.addEventListener('click', (e)=>{
+    const toRemoveClass = document.querySelector(".circle-btn-pressed")
+    if(toRemoveClass) toRemoveClass.classList.remove("circle-btn-pressed")
+    
+    button.parentElement.classList.add("circle-btn-pressed")
+  })
+})
