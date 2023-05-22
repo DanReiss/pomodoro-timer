@@ -44,13 +44,18 @@ function reset() {
   timeNow = 0;
 }
 
+// animações dos botões
+
 const timeButtons = document.querySelectorAll('input[type="radio"]')
 
 timeButtons.forEach(button =>{
-  button.addEventListener('click', (e)=>{
-    const toRemoveClass = document.querySelector(".circle-btn-pressed")
-    if(toRemoveClass) toRemoveClass.classList.remove("circle-btn-pressed")
-    
-    button.parentElement.classList.add("circle-btn-pressed")
-  })
+  button.addEventListener('click', ()=> toogleClass(button.parentElement, "circle-btn-pressed"))
 })
+
+function toogleClass(element, name){
+  console.log(name)
+  const toRemoveClass = document.querySelector(`.${name}`)
+  toRemoveClass?.classList.remove(name)
+
+  element.classList.add(name)
+} 

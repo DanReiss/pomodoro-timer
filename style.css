@@ -136,6 +136,7 @@ main::after{
   text-transform: uppercase;
   font-size: x-large;
   position: relative;
+  transition: all 250ms;
 }
 
 #play-btn{
@@ -144,6 +145,11 @@ main::after{
   display: grid;
   place-items: center;
   position: relative;
+  transition: all 250ms;
+}
+
+#play-btn:active, #reset-btn:active{
+  transform: translate(8px, -5px);
 }
 
 #reset-btn::after, #reset-btn::before, 
@@ -151,6 +157,15 @@ main::after{
   content: "";
   position: absolute;
   background-color: var(--white-shadow);
+  transition: all 250ms;
+}
+
+#reset-btn:active:after, #play-btn:active::after{
+  width: 0;
+}
+
+#reset-btn:active::before, #play-btn:active::before{
+  height: 0;
 }
 
 #reset-btn::before, #play-btn::before{
