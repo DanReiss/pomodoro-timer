@@ -6,6 +6,8 @@ let timer = null;
 let timeNow = 0;
 
 form.addEventListener('submit', (e) => {
+  e.preventDefault();
+
   const data = new FormData(form);
   let minutes = null;
  
@@ -13,16 +15,17 @@ form.addEventListener('submit', (e) => {
     minutes = Number(entries[1]);
   }
 
+  if(!minutes) return;
   reset();
   timer = setInterval(()=> updateTime(minutes), 1000);
-
-  e.preventDefault();
 });
 
 resetBtn.addEventListener('click', reset)
 
 function updateTime(seconds) {
   let missingTime = seconds - timeNow;
+
+  if(missingTime === 0) return reset();
 
   updateDisplay(missingTime);
   timeNow += 1;
