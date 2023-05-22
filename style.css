@@ -70,6 +70,8 @@ main::after{
   display: flex;
   flex-direction: row;
   justify-content: space-between;
+  --btn-box-right: 8px;
+  transform: translateX(calc(-1 * var(--btn-box-right)));
 }
 
 .circle-btn{
@@ -80,9 +82,9 @@ main::after{
   border-radius: 50%;
   font-size: large;
   position: relative;
-  -webkit-box-shadow: 5px -3px 0px 0px #888888;
-  -moz-box-shadow: 5px -3px 0px 0px #888888;
-  box-shadow: 5px -3px 0px 0px #888888;
+  -webkit-box-shadow: var(--btn-box-right) -3px 0px 0px #888888;
+  -moz-box-shadow: var(--btn-box-right) -3px 0px 0px #888888;
+  box-shadow: var(--btn-box-right) -3px 0px 0px #888888;
   transition: all 250ms;
 }
 
@@ -95,7 +97,7 @@ main::after{
 }
 
 .circle-btn-pressed {
-  transform: translate(5px);
+  transform: translate(5px, -3px);
   background-color: #c6c2c2;
   color: #2a881d;
   -webkit-box-shadow: inset 4px 3px 0px 0px  #888888;
@@ -133,6 +135,7 @@ main::after{
   color: var(--red);
   text-transform: uppercase;
   font-size: x-large;
+  position: relative;
 }
 
 #play-btn{
@@ -140,4 +143,31 @@ main::after{
   height: 37px;
   display: grid;
   place-items: center;
+  position: relative;
+}
+
+#reset-btn::after, #reset-btn::before, 
+#play-btn::after, #play-btn::before{
+  content: "";
+  position: absolute;
+  background-color: var(--white-shadow);
+}
+
+#reset-btn::before, #play-btn::before{
+  --btn-box-top: 5px;
+  height: var(--btn-box-top);
+  width: min(calc(100% + var(--btn-box-top)), 100%);
+  transform: skew(-60deg) translate(0, -100%);
+  transform-origin: top;
+  left: 0;
+  top: 0;
+}
+
+#reset-btn::after, #play-btn::after{
+  width: var(--btn-box-right);
+  height: min(calc(100% + var(--btn-box-right)), 100%);
+  transform: skewY(-30deg) translate(100%, 0);
+  transform-origin: right;
+  right: 0;
+  top: 0;
 }
