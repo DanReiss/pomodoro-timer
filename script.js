@@ -18,6 +18,7 @@ form.addEventListener('submit', (e) => {
   if(!minutes) return;
   reset();
   timer = setInterval(()=> updateTime(minutes), 1000);
+  form.parentElement.classList.add("active")
 });
 
 resetBtn.addEventListener('click', reset)
@@ -42,6 +43,7 @@ function reset() {
   clearInterval(timer);
   updateDisplay(0);
   timeNow = 0;
+  form.parentElement.classList.remove("active");
 }
 
 const timeButtons = document.querySelectorAll('input[type="radio"]')
