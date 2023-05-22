@@ -186,3 +186,13 @@ main::after{
   right: 0;
   top: 0;
 }
+
+@media (max-width: 400px) {
+  body{
+    place-items: initial;
+    align-items: center;
+  }
+  main{
+    margin-left: 2.5rem;
+  }
+}

@@ -11,31 +11,33 @@
   <link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@600&display=swap" rel="stylesheet">
 </head>
 <body>
-  <main>
-    <form id="main-form">
-      <div class="buttons-box">
-        <label class="circle-btn">
-          25m
-          <input type="radio" name="time" value="1500">
-        </label>
-        <label class="circle-btn">
-          50m
-          <input type="radio" name="time" value="3000">
-        </label>
-      </div>
-      <div class="display-time">
-        <span id="result">00:00</span>
-      </div>
-      <div class="buttons-box bottom-buttons">
-        <button type="button" id="reset-btn">reset</button>
-        <button type="submit" id="play-btn" aria-label="play button">
-          <svg width="31" height="22" viewBox="0 0 31 22" fill="none" xmlns="http://www.w3.org/2000/svg">
-            <path fill-rule="evenodd" clip-rule="evenodd" d="M1.9375 0V22L29.0625 11L1.9375 0Z" fill="#9C1D1D"/>
-          </svg>
-        </button>
-      </div>
-    </form>
-  </main>
+  <div class="wrapper">
+    <main>
+      <form id="main-form">
+        <div class="buttons-box">
+          <label class="circle-btn">
+            25m
+            <input type="radio" name="time" value="1500">
+          </label>
+          <label class="circle-btn">
+            50m
+            <input type="radio" name="time" value="3000">
+          </label>
+        </div>
+        <div class="display-time">
+          <span id="result">00:00</span>
+        </div>
+        <div class="buttons-box bottom-buttons">
+          <button type="button" id="reset-btn">reset</button>
+          <button type="submit" id="play-btn" aria-label="play button">
+            <svg width="31" height="22" viewBox="0 0 31 22" fill="none" xmlns="http://www.w3.org/2000/svg">
+              <path fill-rule="evenodd" clip-rule="evenodd" d="M1.9375 0V22L29.0625 11L1.9375 0Z" fill="#9C1D1D"/>
+            </svg>
+          </button>
+        </div>
+      </form>
+    </main>
+  </div>
   
   <script src="./script.js"></script>
 </body>
