@@ -53,7 +53,6 @@ timeButtons.forEach(button =>{
 })
 
 function toogleClass(element, name){
-  console.log(name)
   const toRemoveClass = document.querySelector(`.${name}`)
   toRemoveClass?.classList.remove(name)
 
