@@ -6,7 +6,7 @@ const formatTime = (num) => num.toString().length < 2 ? '0' + num : num;
 let timer = null;
 let timeNow = 0;
 const options = {
-  25: {seconds: 1, pause: 300},
+  25: {seconds: 1500, pause: 300},
   50: {seconds: 3000, pause: 600}
 }
 
