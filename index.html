@@ -9,13 +9,14 @@
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@600&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/driver.js@1.0.1/dist/driver.css"/>
 </head>
 <body>
   <div class="wrapper">
     <main>
       <form id="main-form">
         <div class="buttons-box">
-          <label class="circle-btn">
+          <label class="circle-btn" id="box-25-minutes">
             25m
             <input type="radio" name="time" value="25">
           </label>
@@ -23,7 +24,7 @@
             BREAK
             <span></span>   
           </div>
-          <label class="circle-btn">
+          <label class="circle-btn" id="box-50-minutes">
             50m
             <input type="radio" name="time" value="50">
           </label>
@@ -42,7 +43,8 @@
       </form>
     </main>
   </div>
-  
-  <script src="./script.js"></script>
+
+  <script src="https://cdn.jsdelivr.net/npm/driver.js@1.0.1/dist/driver.js.iife.js"></script>
+  <script type="module" src="./script.js"></script>
 </body>
 </html>
