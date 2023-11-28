@@ -22,7 +22,7 @@ const driverObj = driver({
     { element: '#box-25-minutes', popover: { title: '25 Minutes Selector', description: 'Initializes a timer with 25 minutes of focus and 5 minutes of rest.' } },
     { element: '#box-50-minutes', popover: { title: '50 Minutes Selector', description: 'Initializes a timer with 50 minutes of focus and 10 minutes of rest.' } },
     { element: '.break', popover: { title: 'Indicator "Break"', description: 'If it is lit, it indicates that it is time to take a break.'}},
-    { element: '.display-time', popover: { title: 'Tempo restante', description: 'Indicates remaining focus time or pause time.' } },
+    { element: '.display-time', popover: { title: 'Time Remaining', description: 'Indicates remaining focus time or pause time.' } },
     { element: '#reset-btn', popover: { title: 'Reset Button', description: 'Reset the timer.' } },
     { element: '#play-btn', popover: { title: 'Play Button', description: 'Start counting.' } },
     { popover: { title: 'Notice', description: 'As the objective of the pomodoro is to do the sequence without pausing, there is no pause button.' } },
